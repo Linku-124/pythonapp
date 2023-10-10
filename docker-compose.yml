@@ -1,0 +1,12 @@
+version: '3'
+services:
+  python-flask-app:
+    container_name: python-flask-app
+    build:
+      context: .
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_ENV=development
+    restart: always
